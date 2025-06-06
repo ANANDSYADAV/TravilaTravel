@@ -1,0 +1,211 @@
+/* Spectral Font*/
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Open Sans Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Manrope Font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Merienda Font */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+.header-font {
+    font-family: "Manrope", serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.home-font {
+    font-family: "Manrope", serif;
+    font-size: 64px;
+    line-height: 76px;
+}
+
+.home-subfont {
+    font-family: "Manrope", serif;
+    color: #737373;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.home-btnfont {
+    font-family: "Manrope", serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.merienda {
+    font-family: "Merienda", serif;
+}
+
+.inverted {
+    filter: invert(1);
+    background-color: rgb(219, 215, 196) !important;
+}
+
+.invertForm {
+    filter: invert(1);
+    color: rgb(255, 255, 255) !important;
+    background: #1e1e1e;
+}
+
+.invertForm select,
+input {
+    background: transparent;
+}
+
+.invertForm div {
+    color: rgb(255, 255, 255);
+}
+
+.invertSearchResult {
+    filter: invert(1);
+    background: #fcfcfc;
+    color: rgb(36, 23, 23);
+}
+
+.invertSearchResult img {
+    filter: invert(1);
+}
+
+.invertPartnersSection {
+    filter: invert(1);
+    color: rgb(0, 0, 0);
+    background-color: rgb(247, 231, 231);
+}
+
+.invertPartnersSection img {
+    filter: invert(1);
+}
+
+.invertActivitiesSection {
+    filter: invert(1);
+    color: rgb(85, 30, 30);
+    background-color: rgb(255, 255, 255);
+}
+
+.invertActivitiesSection img {
+    filter: invert(1);
+}
+
+.invertBlankSection {
+    background-color: black;
+}
+
+.invertStaticSection {
+    filter: invert(1);
+    background-color: white;
+    color: black;
+}
+
+.invertStaticSection img {
+    filter: invert(1);
+}
+
+.invertStaticSection p {
+    color: black;
+}
+
+.invertTestimonialSection {
+    filter: invert(1);
+}
+
+.invertTestimonialSection img {
+    filter: invert(1);
+}
+
+.invertInspireContainerSection {
+    filter: invert(1);
+    background-color: rgb(235, 221, 221);
+    color: black;
+}
+
+.invertInspireContainerSection img {
+    filter: invert(1);
+}
+
+.invertPayment2Section {
+    filter: invert(1);
+    background-color: rgb(255, 255, 255);
+}
+
+.invertFlightOffersContainer {
+    filter: invert(1);
+    background-color: rgb(240, 228, 228);
+    color: black;
+}
+
+.invertFlightOffersContainer img {
+    filter: invert(1);
+}
+
+.invertNewsletterSection {
+    filter: invert(1);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.invertNewsletterSection img {
+    filter: invert(1);
+}
+
+.invertBottomBanner {
+    filter: invert(1);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.invertBottomBanner img {
+    filter: invert(1);
+}
+
+.invertFooter {
+    filter: invert(1);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.invertFooter img {
+    filter: invert(1);
+}
+
+.invertSignupModal {
+    filter: invert(1);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.invertMessageModal {
+    filter: invert(1);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.invertChatbotWindow {
+    filter: invert(1);
+}
+
+/* .invertDropdownMenu {
+    filter: invert(1);
+    color: white;
+} */
+
+.invertDropdownMenu select {
+    background: transparent;
+}
+
+/*.invertMobileMenuHeader {
+    filter: invert(1);
+    background-color: rgb(245, 241, 237);
+    color: rgb(12, 0, 0);
+}
+
+.invertMobileMenuHeader img {
+    filter: invert(1);
+} */
+
+input[type="text"] {
+    filter: invert(1);
+}

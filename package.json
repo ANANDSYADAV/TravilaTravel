@@ -1,0 +1,24 @@
+{
+  "name": "travila",
+  "version": "1.0.0",
+  "description": "This is a travel website",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build && tsc --watch",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ANANDSYADAV/Travila"
+  },
+  "keywords": [
+    "TS"
+  ],
+  "author": "Anand Yadav",
+  "license": "Apache-2.0 license",
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

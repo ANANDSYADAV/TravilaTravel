@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description"
+        content="This is Travila, a travel website that helps you find popular travel destinations and become your full time travel companion.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Link the Manifest File in index.html -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.css" rel="stylesheet" />
+
+    <title>Travila</title>
+</head>
+
+<body class="header-font max-w-full overflow-x-hidden">
+    <header class="max-w-screen hidden md:flex md:flex-col">
+        <section id="headerSection1"
+            class="flex min-h-[40px] w-screen flex-wrap items-center justify-around gap-4 bg-[#FFF0EC] py-1">
+            <article class="flex gap-5">
+                <div class="flex items-center gap-1">
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                    <p>Unlock the Magic of Travel with Travila - Your Gateway to Extraordinary Experiences</p>
+                </div>
+                <div class="flex items-center gap-1 text-red-700">
+                    <a href="#" class="font-semibold">Get This Now</a>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </div>
+            </article>
+            <article class="flex h-full gap-5">
+                <div class="flex items-center gap-1">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                    <select name="lang" id="lang" class="bg-[#FFF0EC] pr-8 text-center" aria-label="Select Language">
+                        <option value="english" selected>EN</option>
+                        <option value="hindi">HI</option>
+                        <option value="Russian">RU</option>
+                    </select>
+                </div>
+
+                <!-- Vertical Line -->
+                <div class="h-[40px] border-[1px] border-gray-300"></div>
+
+                <div class="flex items-center gap-1">
+                    <select name="curr" id="curr" class="bg-[#FFF0EC] pr-8 text-center" aria-label="Select Currency">
+                        <option value="usd" selected>USD</option>
+                        <option value="inr">INR</option>
+                        <option value="Ruble">RUB</option>
+                    </select>
+                </div>
+
+                <!-- Vertical Line -->
+                <div class="h-h-[40px] border-[1px] border-gray-300"></div>
+
+                <!-- bg-pink-300 -->
+                <div class="flex items-center cursor-pointer rounded-full px-1 themeToggle" id="theme">
+                    <i class="fa fa-sun-o text-xl text-yellow-100 hidden lighttheme" aria-hidden="true"></i>
+                    <i class="fa fa-moon-o text-xl darktheme" aria-hidden="true"></i>
+                </div>
+            </article>
+        </section>
+        <section id="headerSection2"
+            class="flex min-h-[70px] w-screen px-[2%] flex-wrap items-center justify-around bg-[#FFFFFF] py-2">
+            <div>
+                <figure class="flex gap-2 items-center">
+                    <img src="/images/app-logo.svg" alt="app-logo" />
+                    <figcaption class="text-2xl font-bold">Travila</figcaption>
+                </figure>
+            </div>
+            <ul class="mx-auto flex flex-wrap gap-7">
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Pages</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Signin</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Login</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Details</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">About</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Info</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Places</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Destinations</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Locations</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Activities</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Activities</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Events</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Hotels</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Hotels</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Lodges</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Rental</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Rental</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Hire</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Tickets</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Tickets</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Passes</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Pages</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Pages</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notes</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Blog</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-40 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Vlog</a>
+                    </div>
+                </li>
+
+                <li class="group relative">
+                    <a href="#" class="hover:text-red-700">Contact</a>
+                    <div
+                        class="absolute top-full left-0 hidden w-50 space-y-2 bg-white p-2 shadow-md group-hover:block">
+                        <div class="flex items-center gap-1">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <p>+1 222-555-33-99</p>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <p>support@travila.com</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <article class="flex gap-10 sm:gap-5">
+                <div id="becomeExpertBtn"
+                    class="front-bold flex items-center rounded-[50px] bg-black p-4 text-white hover:bg-gray-500 cursor-pointer becomeExpert">
+                    <button aria-label="Become Local Expert">Become Local Expert</button>
+                </div>
+                <div id="menuIcon" class="my-2 flex items-center gap-1 rounded-md bg-[#FEFA17] px-2">
+                    <figure>
+                        <img src="/images/menu.svg" alt="menu icon" />
+                    </figure>
+                </div>
+            </article>
+        </section>
+    </header>
+
+    <header id="mobileMenuHeader" class="p-2 md:hidden">
+        <section class="flex items-center justify-around">
+            <figure class="flex gap-2 items-center">
+                <img src="images/app-logo.svg" alt="app-logo" />
+                <figcaption class="text-2xl font-bold">Travila</figcaption>
+            </figure>
+            <div
+                class="front-bold flex items-center rounded-[50px] bg-black p-4 text-white hover:bg-gray-500 becomeExpert">
+                <button aria-label="Become Local Expert">Become Local Expert</button>
+            </div>
+            <div id="hamburger" class="flex cursor-pointer items-center gap-1 rounded-md bg-[#FEFA17] px-2 py-2">
+                <figure>
+                    <img src="/images/menu.svg" alt="menu icon" />
+                </figure>
+            </div>
+        </section>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="dropdownMenu" class="hidden border-t shadow-md md:hidden">
+            <ul class="flex flex-col space-y-4 p-4">
+                <li>
+                    <div class="flex items-center gap-1">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>+1 222-555-33-99</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-1">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>support@travila.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex flex-col items-center justify-center gap-1">
+                        <div class="flex items-center">
+                            <i class="fa fa-bolt" aria-hidden="true"></i>
+                            <p>Unlock the Magic of Travel with Travila - Your Gateway to Extraordinary Experiences</p>
+                        </div>
+                        <div class="flex items-center">
+                            <a href="#" class="font-semibold text-red-700">Get This Now</a>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex justify-around">
+                    <div class="flex items-center gap-1">
+                        <i class="fa fa-language" aria-hidden="true"></i>
+                        <select name="lang" id="lang" class="bg-white pr-8 text-center" aria-label="Select Language">
+                            <option value="english" selected>EN</option>
+                            <option value="hindi">HI</option>
+                            <option value="Russian">RU</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <select name="curr" id="curr" class="bg-white pr-8 text-center" aria-label="Select Currency">
+                            <option value="usd" selected>USD</option>
+                            <option value="inr">INR</option>
+                            <option value="Ruble">RUB</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center cursor-pointer rounded-full px-1 themeToggle" id="theme">
+                        <i class="fa fa-sun-o text-xl text-yellow-700 hidden lighttheme" aria-hidden="true"></i>
+                        <i class="fa fa-moon-o text-xl darktheme" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <ul class="mx-auto grid grid-cols-3 gap-5">
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="page" id="page" class="pr-6 text-center" aria-label="Select Page">
+                                <option value="home">Home</option>
+                                <option value="signin">Signin</option>
+                                <option value="login">Login</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="details" id="details" class="pr-6 text-center" aria-label="Select Details">
+                                <option value="about">About</option>
+                                <option value="info">Info</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="places" id="places" class="pr-6 text-center" aria-label="Select Places">
+                                <option value="destinations">Destinations</option>
+                                <option value="locations">Locations</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="activities" id="activities" class="pr-6 text-center"
+                                aria-label="Select Activities">
+                                <option value="activities">Activities</option>
+                                <option value="events">Events</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="hotel" id="hotel" class="pr-6 text-center" aria-label="Select Hotel">
+                                <option value="hotel">Hotels</option>
+                                <option value="lodges">Lodges</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="rental" id="rental" class="pr-6 text-center" aria-label="Select Rental">
+                                <option value="rental">Rental</option>
+                                <option value="hire">Hire</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="tickets" id="tickets" class="pr-6 text-center" aria-label="Select Tickets">
+                                <option value="tickets">Tickets</option>
+                                <option value="passes">Passes</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="pages" id="pages" class="pr-6 text-center" aria-label="Select Pages">
+                                <option value="pages">Pages</option>
+                                <option value="notes">Notes</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#333333] hover:text-red-700">
+                            <select name="blog" id="blog" class="pr-6 text-center" aria-label="Select Blog">
+                                <option value="blog">Blog</option>
+                                <option value="vlog">Vlog</option>
+                            </select>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </header>
+
+    <main class="w-screen">
+        <section id="heroSection"
+            class="relative flex min-h-screen w-full flex-col bg-gradient-to-b from-[#E3F0FF] via-[#E3F0FF] via-80% to-white p-5 sm:p-14">
+            <div class="relative mx-auto h-full w-[100%]">
+                <figure>
+                    <img src="/images/home-banner-bg.png" alt="home-bg"
+                        class="absolute right-0 z-0 w-[100%] object-cover sm:w-[70%]" />
+                </figure>
+                <figure>
+                    <img src="/images/home-banner.png" alt="home banner"
+                        class="absolute right-0 top-3 z-0 w-[75%] object-cover sm:w-[53%]" />
+                </figure>
+                <article class="relative z-10 flex flex-col flex-wrap items-start gap-10">
+                    <!-- Main Title -->
+                    <div class="home-font w-[80%] text-[20px]/[25px] sm:text-[64px]/[76px]">
+                        Begin Your
+                        <span class="font-extrabold">Fantastic Travel Experience</span> Here
+                    </div>
+
+                    <!-- Subtitle -->
+                    <div class="home-subfont w-[90%] sm:w-[40%] text-[16px]/[29px] md:text-[25px]/[28px]">Discover
+                        handcrafted travel experiences that blend adventure and luxury, creating memories that last a
+                        lifetime</div>
+
+                    <div class="home-btnfont flex gap-0 gap-5">
+                        <button id="discover" aria-label="Discover Now"
+                            class="rounded-[50px] bg-[#FEFA17] px-5 hover:bg-gray-500">Discover Now</button>
+                        <div class="flex items-center gap-1">
+                            <i class="fa fa-play-circle text-5xl" aria-hidden="true"></i>
+                            <p>How It Work?</p>
+                        </div>
+                    </div>
+                </article>
+                <article
+                    class="filters relative mt-[100px] flex min-h-[50%] w-[100%] flex-col items-center justify-around gap-5 rounded-xl bg-[#FFFFFF] p-8">
+                    <div class="flex w-full items-center justify-between">
+                        <ul class="flex flex-wrap items-center gap-3 sm:gap-8">
+                            <li id="tours"
+                                class="filter-btn rounded-[50px] bg-black px-3 py-1 text-white cursor-pointer">Tours
+                            </li>
+                            <li id="hotel" class="filter-btn rounded-[50px] px-3 py-1 text-black cursor-pointer">Hotels
+                            </li>
+                            <li id="ticket" class="filter-btn rounded-[50px] px-3 py-1 text-black cursor-pointer">
+                                Tickets</li>
+                            <li id="rental" class="filter-btn rounded-[50px] px-3 py-1 text-black cursor-pointer">Rental
+                            </li>
+                            <li id="activity" class="filter-btn rounded-[50px] px-3 py-1 text-black cursor-pointer">
+                                Activities</li>
+                        </ul>
+                        <div class="flex items-center gap-1">
+                            <i class="fa fa-user text-[#D6D7D8]" aria-hidden="true"></i>
+                            <p class="text-gray-700">Need more help?</p>
+                        </div>
+                    </div>
+
+                    <form id="generalForm"
+                        class="forms flex h-[80%] w-[100%] flex-row flex-wrap items-center justify-around gap-3 rounded-xl border-[1px] border-[#E4E6E8] bg-white p-2">
+                        <div class="mx-auto my-2 flex min-h-[40%] flex-col gap-2">
+                            <div class="font-bold text-gray-700">Location</div>
+                            <div>
+                                <i class="fa fa-map-marker text-[#D6D7D8]" aria-hidden="true"></i>
+                                <select name="location" id="location" class="ml-1 pr-8 font-bold text-center"
+                                    aria-label="Select Location">
+                                    <option value="usa" selected>New York, USA</option>
+                                    <option value="russia">Moscow, Russia</option>
+                                    <option value="india">Delhi, India</option>
+                                    <option value="canada">Toronto, Canada</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Check In</div>
+                            <div class="flex items-center gap-1">
+                                <div>
+                                    <input type="date" name="checkin" id="checkin" value="" aria-label="Checkin Date"
+                                        required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Check Out</div>
+                            <div class="flex items-center gap-1">
+                                <input type="date" name="checkout" id="checkout" value="" aria-label="Checkout Date"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Guest</div>
+                            <div>
+                                <i class="fa fa-user text-[#D6D7D8]" aria-hidden="true"></i>
+                                <select name="peoples" id="peoples" class="font-bold pr-7 text-center"
+                                    aria-label="Select Passangers">
+                                    <option value="2A2C" selected>2 adults, 2 children</option>
+                                    <option value="2A">2 adults</option>
+                                    <option value="1A1C">1 adult, 1 child</option>
+                                    <option value="1A">1 adult</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" aria-label="Search"
+                            class="searchButton my-2 flex items-center gap-2 rounded-[50px] bg-black px-8 py-3 text-[16px]/[26px] text-white hover:bg-gray-500">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <div class="font-semibold">Search</div>
+                        </button>
+                    </form>
+
+                    <form id="flightForm"
+                        class="forms hidden flex h-[80%] w-[100%] flex-row flex-wrap items-center justify-around gap-3 rounded-xl border-[1px] border-[#E4E6E8] bg-white p-2">
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">From</div>
+                            <div class="flex items-center gap-1">
+                                <i class="fa fa-plane text-[#D6D7D8]" aria-hidden="true"></i>
+                                <select name="from" id="from" class="ml-1 bg-[#FFFFFF] pr-8 font-bold text-center"
+                                    aria-label="Select Departure">
+                                    <option value="usa" selected>New York, USA</option>
+                                    <option value="russia">Moscow, Russia</option>
+                                    <option value="india">Delhi, India</option>
+                                    <option value="canada">Toronto, Canada</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">To</div>
+                            <div class="flex items-center gap-1">
+                                <i class="fa fa-plane text-[#D6D7D8]" aria-hidden="true"></i>
+                                <select name="to" id="to" class="ml-1 bg-[#FFFFFF] pr-8 font-bold text-center"
+                                    aria-label="Select Destination">
+                                    <option value="usa">New York, USA</option>
+                                    <option value="russia" selected>Moscow, Russia</option>
+                                    <option value="india">Delhi, India</option>
+                                    <option value="canada">Toronto, Canada</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Departure Date</div>
+                            <div class="flex items-center gap-1">
+                                <input type="date" name="departure" id="departure" value="" aria-label="Departure Date"
+                                    required />
+                            </div>
+                        </div>
+
+
+                        <div class="h-[80%] border-[1px] border-[#E4E6E8]"></div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Return Date</div>
+                            <div class="flex items-center gap-1">
+                                <input type="date" name="return" id="return" value="" aria-label="Return Date"
+                                    required />
+                            </div>
+                        </div>
+
+
+                        <div class="h-[80%] border-[1px] border-[#E4E6E8]"></div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Passengers</div>
+                            <div>
+                                <i class="fa fa-user text-[#D6D7D8]" aria-hidden="true"></i>
+                                <select name="passengers" id="passengers"
+                                    class="bg-[#FFFFFF] font-bold pr-7 text-center" aria-label="Select Passengers">
+                                    <option value="1A" selected>1 adult</option>
+                                    <option value="2A">2 adults</option>
+                                    <option value="1A1C">1 adult, 1 child</option>
+                                    <option value="2A2C">2 adults, 2 children</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" aria-label="Search Flights"
+                            class="searchButton my-2 flex items-center gap-2 rounded-[50px] bg-black px-8 py-3 text-[16px]/[26px] text-white hover:bg-gray-500">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <div class="font-semibold">Search Flights</div>
+                        </button>
+                    </form>
+
+                    <form id="activitiesForm"
+                        class="forms hidden flex h-[80%] w-[100%] flex-row flex-wrap items-center justify-around gap-3 rounded-xl border-[1px] border-[#E4E6E8] bg-white p-2">
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Location</div>
+                            <div>
+                                <i class="fa fa-map-marker text-[#D6D7D8]" aria-hidden="true"></i>
+                                <select name="location" id="activityLocation"
+                                    class="ml-1 bg-[#FFFFFF] pr-8 font-bold text-center" aria-label="Select Location">
+                                    <option value="usa" selected>New York, USA</option>
+                                    <option value="russia">Moscow, Russia</option>
+                                    <option value="india">Delhi, India</option>
+                                    <option value="canada">Toronto, Canada</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mx-auto my-2 flex flex-col gap-2">
+                            <div class="font-bold text-gray-700">Date</div>
+                            <div class="flex items-center gap-1">
+                                <input type="date" name="activityDate" id="activityDate" value=""
+                                    aria-label="Activity Date" required />
+                            </div>
+                        </div>
+
+                        <button type="submit" aria-label="Search Activities"
+                            class="searchButton my-2 flex items-center gap-2 rounded-[50px] bg-black px-8 py-3 text-[16px]/[26px] text-white hover:bg-gray-500">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <div class="font-semibold">Search Activities</div>
+                        </button>
+                    </form>
+
+
+                </article>
+            </div>
+        </section>
+
+        <section id="search-result" class="px-[5%] py-20 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        </section>
+
+
+        <section id="partners"
+            class="flex h-[100%] w-full flex-col items-center gap-7 px-[6%] lg:justify-center mx-auto py-8">
+            <article class="flex flex-col md:flex-row gap-10 justify-center items-center w-[90%] mx-auto">
+                <div class="flex w-full md:w-[50%] items-center">
+                    <figure>
+                        <img src="/images/users.svg" alt="users" class="w-[300px]" />
+                    </figure>
+                    <div><b>1684</b> people used <b>Travila</b> in the last <b>24 hours</b></div>
+                </div>
+                <div class="flex w-full md:w-[70%] flex-col justify-center">
+                    <div class="text-[24px]/[32px] font-extrabold">Partner with</div>
+                    <div class="text-[12px]/[18px] text-gray-700">We are a trusted partner of airlines, payment
+                        gateways, and travel services around the world.</div>
+                </div>
+            </article>
+            <article class="flex flex-wrap items-center justify-center gap-4">
+                <figure class="rounded-[5px] border-[1px] border-[#E4E6E8] p-3">
+                    <img src="/images/paypal.svg" alt="paypal" class="h-[30px] w-[80px]" />
+                </figure>
+                <figure class="rounded-[5px] border-[1px] border-[#E4E6E8] p-3">
+                    <img src="/images/stripe.svg" alt="stripe" class="h-[30px] w-[80px]" />
+                </figure>
+                <figure class="rounded-[5px] border-[1px] border-[#E4E6E8] p-3">
+                    <img src="/images/mastercard.svg" alt="mastercard" class="h-[30px] w-[80px]" />
+                </figure>
+                <figure class="rounded-[5px] border-[1px] border-[#E4E6E8] p-3">
+                    <img src="/images/skrill.svg" alt="skrill" class="h-[30px] w-[80px]" />
+                </figure>
+            </article>
+        </section>
+        <hr />
+
+
+        <section id="activitiesSection" class="py-12 flex flex-col items-center gap-9">
+            <div class="flex flex-col justify-center">
+                <div class="text-[36px]/[48px] font-extrabold">Travel By Activities</div>
+                <div class="text-[20px]/[32px] font-medium text-gray-700">Navigate the Global with Confidence</div>
+            </div>
+            <article id="bubbles" class="mx-auto flex w-[85%] flex-wrap justify-center gap-8">
+
+            </article>
+        </section>
+
+        <section id="articles-container"
+            class="px-[5%] py-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        </section>
+
+        <!-- Load more button -->
+        <div id="loadMoreActivitiesBtn" class="py-10 flex justify-center">
+            <button id="load-more" aria-label="Load More Tours"
+                class="flex items-center gap-2 rounded-[50px] bg-black px-5 py-3 text-white hover:bg-gray-500">
+                <p class="text-[19px]">
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                </p>
+                <p class="text-[16px]/[26px] font-bold">Load More Tours</p>
+            </button>
+        </div>
+
+        <section class="relative">
+            <figure class="absolute top-0">
+                <img src="/images/bottom-banner.png" alt="bottom-banner" />
+            </figure>
+            <figure class="absolute top-0">
+                <img src="/images/bottom-banner-shade.png" alt="bottom-banner" />
+            </figure>
+        </section>
+
+        <!-- Blank section -->
+        <section id="blankSection" class="h-[10vh] sm:h-[40vh]"></section>
+
+        <section id="staticSection" class="px-[5%] py-20 flex w-full flex-col gap-4">
+            <!-- First Row: 2 Columns -->
+            <div class="flex flex-col justify-between gap-4 sm:flex-row">
+                <div
+                    class="relative w-full transform rounded-[8px] transition-transform duration-500 hover:scale-105 md:w-[50%]">
+                    <figure class="z-0 h-full w-full">
+                        <img src="images/page2-grid/image1.png" alt="image1" class="rounded-[8px]" />
+                    </figure>
+                    <figure class="absolute top-0 z-10">
+                        <img src="images/page2-grid/image1-shade.png" alt="image1-shade" class="rounded-[8px]" />
+                    </figure>
+                    <div
+                        class="merienda absolute left-[5%] top-10 z-40 text-[15px] font-normal text-white sm:text-[24px]/[35px]">
+                        <p>Waking up</p>
+                        <p>in a far away place</p>
+                    </div>
+                    <div class="absolute bottom-[15%] left-[5%] z-40">
+                        <button aria-label="View More"
+                            class="rounded-[50px] bg-[#FEFA17] px-2 py-2 text-[10px]/[12px] font-bold hover:bg-gray-500 sm:px-5 sm:py-3 md:text-[16px]/[26px]">View
+                            more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div
+                    class="relative w-full transform rounded-[8px] transition-transform duration-500 hover:scale-105 md:w-[50%]">
+                    <figure class="z-0 h-full w-full">
+                        <img src="images/page2-grid/image2.png" alt="image2" class="rounded-[8px]" />
+                    </figure>
+                    <figure class="absolute top-0 z-10">
+                        <img src="images/page2-grid/image2-shade.png" alt="image2-shade" class="rounded-[8px]" />
+                    </figure>
+                    <div
+                        class="merienda absolute right-[5%] top-8 z-40 text-[17px]/[22px] font-normal text-white lg:text-[32px]/[46px]">
+                        <p>adventure</p>
+                        <p>starts today</p>
+                    </div>
+                    <div class="absolute bottom-[20%] right-[10%] z-40 sm:bottom-[15%] sm:right-[15%]">
+                        <button aria-label="View More"
+                            class="rounded-[50px] bg-[#FEFA17] px-5 py-3 text-[16px]/[26px] font-bold hover:bg-gray-500">View
+                            more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row: 3 Columns -->
+            <div class="flex flex-col gap-4 sm:flex-row">
+                <div
+                    class="relative w-full transform rounded-[8px] transition-transform duration-500 hover:scale-105 md:w-[50%]">
+                    <figure class="z-0 h-full w-full">
+                        <img src="images/page2-grid/image3.png" alt="image3"
+                            class="h-full w-full rounded-[8px] object-cover" />
+                    </figure>
+                    <figure class="absolute top-0 z-10 h-full w-full">
+                        <img src="images/page2-grid/image3-shade.png" alt="image3-shade"
+                            class="h-full w-full rounded-[8px] object-cover" />
+                    </figure>
+                    <figure class="absolute left-[5%] top-[40%]">
+                        <img src="images/page2-grid/image3-top.png" alt="image3-top" />
+                    </figure>
+                    <div class="absolute left-[7%] top-[30%] z-40 text-[18px]/[28px] font-bold text-white">Waking up in
+                        a far away place</div>
+                    <div class="absolute bottom-[23px] left-[13%] z-40 text-[14px]/[22px] font-bold">1-800-222-8888
+                    </div>
+                    <div class="absolute bottom-[18%] left-[7%] z-40">
+                        <button aria-label="View More"
+                            class="rounded-[50px] bg-[#FEFA17] px-5 py-3 text-[16px]/[26px] font-bold hover:bg-gray-500">View
+                            more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+                <div
+                    class="relative w-full transform rounded-[8px] transition-transform duration-500 hover:scale-105 md:w-[50%]">
+                    <figure class="z-0 h-full w-full">
+                        <img src="images/page2-grid/image4.png" alt="image4"
+                            class="h-full w-full rounded-[8px] object-cover" />
+                    </figure>
+                    <figure class="absolute top-0 z-10 h-full w-full">
+                        <img src="images/page2-grid/image4-shade.png" alt="image4-shade"
+                            class="h-full w-full rounded-[8px] object-cover" />
+                    </figure>
+                    <div class="absolute left-6 top-5 z-40 text-[18px]/[23px] font-bold text-white">Dream Vacation</div>
+                    <div
+                        class="merienda absolute left-6 top-12 z-40 text-[22px]/[24px] font-normal text-white md:text-[36px]/[50px]">
+                        <p>Start your</p>
+                        <p>JourneyNow</p>
+                    </div>
+                    <div class="absolute bottom-[15%] left-[16%] z-40">
+                        <button aria-label="View More"
+                            class="rounded-[50px] bg-[#FEFA17] px-5 py-3 text-[16px]/[26px] font-bold hover:bg-gray-500">View
+                            more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+                <div
+                    class="relative w-full transform rounded-[8px] transition-transform duration-500 hover:scale-105 md:w-[50%]">
+                    <figure class="z-0 h-full w-full">
+                        <img src="images/page2-grid/image5.png" alt="image5"
+                            class="h-full w-full rounded-[8px] object-cover" />
+                    </figure>
+                    <figure class="absolute top-0 z-10 h-full w-full">
+                        <img src="images/page2-grid/image5-shade.png" alt="image5-shade"
+                            class="h-full w-full rounded-[8px] object-cover" />
+                    </figure>
+                    <div class="absolute right-[40%] top-7 z-40 text-[18px]/[28px] font-bold text-white">Sale Off</div>
+                    <div
+                        class="merienda absolute right-10 top-14 z-40 text-[22px]/[24px] font-normal text-white md:text-[36px]/[40px]">
+                        <p>Book and</p>
+                        <p>Get best</p>
+                        <p>Deals now</p>
+                    </div>
+                    <div class="absolute bottom-[5%] right-[25%] z-40">
+                        <button aria-label="View More"
+                            class="rounded-[50px] bg-[#FEFA17] px-5 py-3 text-[16px]/[26px] font-bold hover:bg-gray-500">View
+                            more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flightOffersContainer" class="py-20 ">
+            <section class="mb-10 mx-auto w-[90%]">
+                <div class="mx-auto flex w-[90%] flex-col items-start gap-3">
+                    <div class="text-[25px] font-extrabold sm:text-[52px]/[76px]">Flight Offer Deals</div>
+                    <div class="text-[20px] font-medium text-gray-700 sm:text-[20px]/[32px]">Competitive fares for your
+                        route-specific searches.</div>
+                </div>
+            </section>
+
+            <section class="mx-auto grid w-[90%] grid-cols-1 gap-6 px-5 md:grid-cols-2 lg:grid-cols-2">
+                <article
+                    class="relative flex max-h-[350px] w-full transform flex-col overflow-hidden rounded-[32px] border-[#E4E6E8] bg-white transition-transform duration-500 hover:scale-105 border-2 border-black">
+                    <!-- First div (figure container) -->
+                    <div class="aspect-w-4 aspect-h-3 relative z-10 h-full w-full overflow-hidden">
+                        <figure class="h-full">
+                            <img src="images/flight-deals/image1.png" alt="flight-image1"
+                                class="h-full w-[50%] object-cover" />
+                        </figure>
+                        <div class="absolute top-[22px] flex w-full justify-between px-7">
+                            <div class="rounded-[50px] bg-white px-2 py-1 font-bold"><i class="fa fa-heart-o"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Second div -->
+                    <div
+                        class="absolute right-[1rem] z-20 flex h-full w-[60%] flex-col items-center justify-around rounded-[32px] bg-white px-4 md:px-8">
+                        <div class="text-12px flex gap-2 font-medium text-gray-700 lg:gap-3 lg:text-[16px]/[26px]">
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                09 Jun 2024
+                            </div>
+                            —
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                16 Jun 2024
+                            </div>
+                        </div>
+                        <div class="text-14px flex items-center gap-3 font-extrabold lg:text-[24px]/[32px]">
+                            <div>Denmark</div>
+                            <figure>
+                                <img src="images/route-icon.png" alt="route-icon" />
+                            </figure>
+                            <div>New York</div>
+                        </div>
+
+                        <div
+                            class="text-10px flex items-center justify-between gap-3 font-medium lg:gap-10 lg:text-[16px]/[26px]">
+                            <div class="flex flex-col gap-0 lg:gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                            <div class="h-[80%] border-[1px] border-[#E4E6E8]"></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                        </div>
+                        <div class="flex w-full items-center justify-around">
+                            <div class="text-[10px] font-medium text-gray-700 lg:text-[16px]/[26px]">18 Seats left</div>
+                            <div><button aria-label="Book Now"
+                                    class="text-10px rounded-[50px] border-[1px] border-[#E4E6E8] bg-[#F2F4F6] px-2 py-1 font-bold hover:bg-gray-500 lg:px-5 lg:py-3 lg:text-[14px]/[22px]">Book
+                                    Now</button></div>
+                        </div>
+                    </div>
+                </article>
+                <article
+                    class="relative flex max-h-[350px] w-full transform flex-col overflow-hidden rounded-[32px] border-[#E4E6E8] bg-white transition-transform duration-500 hover:scale-105 border-2 border-black">
+                    <!-- First div (figure container) -->
+                    <div class="aspect-w-4 aspect-h-3 relative z-10 h-full w-full overflow-hidden">
+                        <figure class="h-full">
+                            <img src="images/flight-deals/image2.png" alt="flight-image2"
+                                class="h-full w-[50%] object-cover" />
+                        </figure>
+                        <div class="absolute top-[22px] flex w-full justify-between px-7">
+                            <div class="rounded-[50px] bg-white px-2 py-1 font-bold"><i class="fa fa-heart-o"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Second div -->
+                    <div
+                        class="absolute right-[1rem] z-20 flex h-full w-[60%] flex-col items-center justify-around rounded-[32px] bg-white px-4 md:px-8">
+                        <div class="text-12px flex gap-2 font-medium text-gray-700 lg:gap-3 lg:text-[16px]/[26px]">
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                09 Jun 2024
+                            </div>
+                            —
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                16 Jun 2024
+                            </div>
+                        </div>
+                        <div class="text-14px flex items-center gap-3 font-extrabold lg:text-[24px]/[32px]">
+                            <div>Denmark</div>
+                            <figure>
+                                <img src="images/route-icon.png" alt="route-icon" />
+                            </figure>
+                            <div>New York</div>
+                        </div>
+
+                        <div
+                            class="text-10px flex items-center justify-between gap-3 font-medium lg:gap-10 lg:text-[16px]/[26px]">
+                            <div class="flex flex-col gap-0 lg:gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                            <div class="h-[80%] border-[1px] border-[#E4E6E8]"></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                        </div>
+                        <div class="flex w-full items-center justify-around">
+                            <div class="text-[10px] font-medium text-gray-700 lg:text-[16px]/[26px]">18 Seats left</div>
+                            <div><button aria-label="Book Now"
+                                    class="text-10px rounded-[50px] border-[1px] border-[#E4E6E8] bg-[#F2F4F6] px-2 py-1 font-bold hover:bg-gray-500 lg:px-5 lg:py-3 lg:text-[14px]/[22px]">Book
+                                    Now</button></div>
+                        </div>
+                    </div>
+                </article>
+                <article
+                    class="relative flex max-h-[350px] w-full transform flex-col overflow-hidden rounded-[32px] border-[#E4E6E8] bg-white transition-transform duration-500 hover:scale-105 border-2 border-black">
+                    <!-- First div (figure container) -->
+                    <div class="aspect-w-4 aspect-h-3 relative z-10 h-full w-full overflow-hidden">
+                        <figure class="h-full">
+                            <img src="images/flight-deals/image3.png" alt="flight-image3"
+                                class="h-full w-[50%] object-cover" />
+                        </figure>
+                        <div class="absolute top-[22px] flex w-full justify-between px-7">
+                            <div class="rounded-[50px] bg-white px-2 py-1 font-bold"><i class="fa fa-heart-o"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Second div -->
+                    <div
+                        class="absolute right-[1rem] z-20 flex h-full w-[60%] flex-col items-center justify-around rounded-[32px] bg-white px-4 md:px-8">
+                        <div class="text-12px flex gap-2 font-medium text-gray-700 lg:gap-3 lg:text-[16px]/[26px]">
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                09 Jun 2024
+                            </div>
+                            —
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                16 Jun 2024
+                            </div>
+                        </div>
+                        <div class="text-14px flex items-center gap-3 font-extrabold lg:text-[24px]/[32px]">
+                            <div>Denmark</div>
+                            <figure>
+                                <img src="images/route-icon.png" alt="route-icon" />
+                            </figure>
+                            <div>New York</div>
+                        </div>
+
+                        <div
+                            class="text-10px flex items-center justify-between gap-3 font-medium lg:gap-10 lg:text-[16px]/[26px]">
+                            <div class="flex flex-col gap-0 lg:gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                            <div class="h-[80%] border-[1px] border-[#E4E6E8]"></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                        </div>
+                        <div class="flex w-full items-center justify-around">
+                            <div class="text-[10px] font-medium text-gray-700 lg:text-[16px]/[26px]">18 Seats left</div>
+                            <div><button aria-label="Book Now"
+                                    class="text-10px rounded-[50px] border-[1px] border-[#E4E6E8] bg-[#F2F4F6] px-2 py-1 font-bold hover:bg-gray-500 lg:px-5 lg:py-3 lg:text-[14px]/[22px]">Book
+                                    Now</button></div>
+                        </div>
+                    </div>
+                </article>
+                <article
+                    class="relative flex max-h-[350px] w-full transform flex-col overflow-hidden rounded-[32px] border-[#E4E6E8] bg-white transition-transform duration-500 hover:scale-105 border-2 border-black">
+                    <!-- First div (figure container) -->
+                    <div class="aspect-w-6 aspect-h-4 relative z-10 w-full overflow-hidden">
+                        <figure class="h-full">
+                            <img src="images/flight-deals/image4.png" alt="flight-image4"
+                                class="h-full w-[50%] object-cover" />
+                        </figure>
+                        <div class="absolute top-[22px] flex w-full justify-between px-7">
+                            <div class="rounded-[50px] bg-white px-2 py-1 font-bold"><i class="fa fa-heart-o"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Second div -->
+                    <div
+                        class="absolute right-[1rem] z-20 flex h-full w-[60%] flex-col items-center justify-around rounded-[32px] bg-white px-4 md:px-8">
+                        <div class="text-12px flex gap-2 font-medium text-gray-700 lg:gap-3 lg:text-[16px]/[26px]">
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                09 Jun 2024
+                            </div>
+                            —
+                            <div>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                16 Jun 2024
+                            </div>
+                        </div>
+                        <div class="text-14px flex items-center gap-3 font-extrabold lg:text-[24px]/[32px]">
+                            <div>Denmark</div>
+                            <figure>
+                                <img src="images/route-icon.png" alt="route-icon" />
+                            </figure>
+                            <div>New York</div>
+                        </div>
+
+                        <div
+                            class="text-10px flex items-center justify-between gap-3 font-medium lg:gap-10 lg:text-[16px]/[26px]">
+                            <div class="flex flex-col gap-0 lg:gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                            <div class="h-[80%] border-[1px] border-[#E4E6E8]"></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="text-[#575756]">Business</div>
+                                <div class="text-[12px] font-extrabold lg:text-[24px]/[32px]">$288.15</div>
+                            </div>
+                        </div>
+                        <div class="flex w-full items-center justify-around">
+                            <div class="text-[10px] font-medium text-gray-700 lg:text-[16px]/[26px]">18 Seats left</div>
+                            <div><button aria-label="Book Now"
+                                    class="text-10px rounded-[50px] border-[1px] border-[#E4E6E8] bg-[#F2F4F6] px-2 py-1 font-bold hover:bg-gray-500 lg:px-5 lg:py-3 lg:text-[14px]/[22px]">Book
+                                    Now</button></div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="testimonialSection"
+            class="relative mx-auto flex flex-col items-center justify-center gap-5 bg-[#E3F0FF] px-[1vw] py-20 md:flex-row md:py-[6%]">
+            <figure class="absolute left-[30%] top-2 opacity-50 md:opacity-100">
+                <img src="images/movement.png" alt="dotted-arrow" />
+            </figure>
+
+            <article
+                class="mx-auto flex w-[100%] flex-col items-center justify-center gap-5 md:ml-[5vw] lg:w-[100%] xl:w-[100%]">
+                <div
+                    class="flex w-[80%] items-center justify-center rounded-[50px] border-[1px] border-[#E4E6E8] bg-white px-4 py-2 font-bold md:w-[100%]">
+                    <figure>
+                        <img src="images/users.svg" alt="users" />
+                    </figure>
+                    Testimonials
+                </div>
+                <div class="flex w-[80%] flex-col gap-3">
+                    <div class="text-[30px]/[30px] font-extrabold md:text-[52px]/[76px]">What our clients are saying
+                        about us?</div>
+                    <div class="w-[100%] text-[20px] font-medium text-gray-700 md:text-[18px]/[28px]">Discover how you
+                        can offset your adventure's carbon emissions and support the sustainable initiatives practiced
+                        by our operators worldwide.</div>
+                </div>
+            </article>
+
+            <section id="testimonials-section" class="flex flex-col items-center gap-1 xl:flex-row mr-2">
+
+            </section>
+
+            <div class="absolute bottom-5 left-[36%] mt-10 flex justify-center gap-2 md:bottom-[10%]">
+                <button id="left-testimonial-btn" aria-label="Navigate Left"
+                    class="rounded-full bg-[#E4E6E8] px-3 py-2 hover:bg-gray-500">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+                <button id="right-testimonial-btn" aria-label="Navigate Right"
+                    class="rounded-full bg-[#E4E6E8] px-3 py-2 hover:bg-gray-500">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="inspireContainerSection" class="flex w-full flex-col items-center justify-center py-7">
+            <article class="py-6 flex w-[90%] flex-col items-center justify-around gap-3 md:flex-row md:items-end">
+                <div class="flex flex-col gap-2">
+                    <div class="text-[25px] font-extrabold sm:text-[52px]/[76px]">Get inspiration for your next trip
+                    </div>
+                    <div class="text-[20px]/[32px] font-medium text-gray-700">Favorite destinations based on customer
+                        reviews</div>
+                </div>
+                <div class="md:w-[20%]">
+                    <button id="inspire-more-btn" aria-label="View More"
+                        class="rounded-[50px] bg-black px-4 py-2 text-white hover:bg-gray-500">
+                        View More
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </article>
+
+            <section id="inspire-section" class="mx-auto grid w-[90%] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+            </section>
+        </section>
+
+        <section id="payment2Section" class="py-[15%] w-full">
+            <article id="payment2" class="flex flex-wrap items-center justify-around gap-5 w-[80%] mx-auto">
+
+            </article>
+        </section>
+
+        <!-- newsletter section -->
+        <section id="newsletterSection" class="py-5">
+            <section
+                class="mx-auto flex h-[450px] w-[95%] flex-col items-center justify-center rounded-[32px] border-[#E4E6E8] sm:w-[90%] md:flex-row text-center">
+                <article
+                    class="flex h-full w-[80%] flex-col gap-6 rounded-t-[32px] border-[1px] bg-[#E3F0FF] px-2 py-10 md:w-[40%] md:rounded-l-[32px] md:rounded-r-[0px] md:px-20 md:px-4">
+                    <div>
+                        <button aria-label="Join Newsletter" class="rounded-[50px] bg-[#FEFA17] px-3 py-2">Join our
+                            Newsletter</button>
+                    </div>
+                    <div class="text-[14px] font-extrabold md:text-[28px]/[36px]">Subscribe to see secret deals prices
+                        drop the moment you sign up!</div>
+                    <form class="subscribeForm relative rounded-[50px]">
+                        <input type="email" placeholder="Your email"
+                            class="emailInput w-full rounded-[50px] p-3 bg-black" required />
+                        <button type="submit" aria-label="Submit"
+                            class="absolute right-0 rounded-[50px] bg-gray-700 px-6 py-3 text-white hover:bg-gray-400">Submit</button>
+                    </form>
+
+
+                    <div class="text-gray-700">No ads. No trails. No commitments</div>
+                </article>
+                <div class="h-full w-[80%] md:w-[40%]">
+                    <figure class="h-full w-full">
+                        <img src="images/news-letter.png" alt="new-letter"
+                            class="h-full w-full rounded-b-[32px] object-cover md:rounded-b-[0px] md:rounded-r-[32px]" />
+                    </figure>
+                </div>
+            </section>
+        </section>
+
+        <section id="bottom-banner" class="py-40 grid w-full grid-cols-1 sm:grid-cols-3 md:grid-cols-7">
+
+        </section>
+    </main>
+
+    <footer id="footer" class="px-[5%] flex w-full flex-col gap-5 px-3 py-10">
+        <section class="flex w-[100%] flex-col items-center justify-around gap-12 lg:flex-row">
+            <article class="mx-auto flex w-full flex-col items-start gap-5 lg:w-[20%]">
+                <figure class="flex gap-2 items-center">
+                    <img src="images/app-logo.svg" alt="app-logo" />
+                    <figcaption class="text-2xl font-bold">Travila</figcaption>
+                </figure>
+                <div>Dive into local recommendations for a truly authentic experience.</div>
+                <div>
+                    <div><i class="fa fa-phone rounded-full border-[1px] border-[#575756] px-1 py-1 text-[#575756]"
+                            aria-hidden="true"></i> Need help?</div>
+                    <div class="font-extrabold text-red-700">1-800-222-8888</div>
+                </div>
+            </article>
+            <section class="flex gap-8 flex-col sm:flex-row">
+                <ul class="flex flex-col flex-wrap gap-3 text-gray-600">
+                    <li class="font-semibold text-black">Company</li>
+                    <li class="hover:text-red-700"><a href="#">About Us</a></li>
+                    <li class="hover:text-red-700"><a href="#">Community Blog</a></li>
+                    <li class="hover:text-red-700"><a href="#">Jobs & Careers</a></li>
+                    <li class="hover:text-red-700"><a href="#">Contact Us</a></li>
+                    <li class="hover:text-red-700"><a href="#">Our Awards</a></li>
+                </ul>
+                <ul class="flex flex-col flex-wrap gap-3 text-gray-600">
+                    <li class="font-semibold text-black">Services</li>
+                    <li class="hover:text-red-700"><a href="#">Tour Guide</a></li>
+                    <li class="hover:text-red-700"><a href="#">Tour Booking</a></li>
+                    <li class="hover:text-red-700"><a href="#">Hotel Booking</a></li>
+                    <li class="hover:text-red-700"><a href="#">Ticket Booking</a></li>
+                    <li class="hover:text-red-700"><a href="#">Rental Services</a></li>
+                </ul>
+                <ul class="flex flex-col flex-wrap gap-3 text-gray-600">
+                    <li class="font-semibold text-black">Legal</li>
+                    <li class="hover:text-red-700"><a href="#">Terms of Services</a></li>
+                    <li class="hover:text-red-700"><a href="#">Privacy Policy</a></li>
+                    <li class="hover:text-red-700"><a href="#">Cookies Policy</a></li>
+                    <li class="hover:text-red-700"><a href="#">Data Processing</a></li>
+                    <li class="hover:text-red-700"><a href="#">Datya Policy</a></li>
+                </ul>
+                <ul class="flex flex-col flex-wrap gap-3 text-gray-600">
+                    <li class="font-semibold text-black">Support</li>
+                    <li class="hover:text-red-700"><a href="#">Forum support</a></li>
+                    <li class="hover:text-red-700"><a href="#">Help Center</a></li>
+                    <li class="hover:text-red-700"><a href="#">How it works</a></li>
+                    <li class="hover:text-red-700"><a href="#">Security</a></li>
+                </ul>
+            </section>
+            <form class="subscribeForm flex w-[80%] flex-col items-center gap-3 lg:w-[30%]">
+                <div class="font-semibold text-black">Newsletter</div>
+                <div class="rounded-[50px] border-[1px] border-[#737373] px-1 py-3">
+                    <i class="fa fa-envelope-o mx-2" aria-hidden="true"></i>
+                    <label for="mail" class="hidden">Enter your email</label>
+                    <input type="email" placeholder="Enter your email" id="mailid" class="emailInput bg-transparent"
+                        required />
+                </div>
+                <button type="submit" aria-label="Subscribe"
+                    class="w-[50%] rounded-[50px] bg-[#FEFA17] py-2 hover:bg-gray-500">Subscribe</button>
+            </form>
+        </section>
+        <div class="mx-auto w-[90%] border-[1px] border-[#5756567D]"></div>
+        <section class="flex flex-col items-center justify-around sm:flex-row">
+            <div>© 2024 Travila Inc. All rights reserved.</div>
+            <div class="flex items-center gap-10">
+                <div>Follow us</div>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+    <!-- Popup Message -->
+    <div id="popup"
+        class="hidden fixed top-5 left-[60%] transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg w-auto z-100">
+        <p id="popupMessage" class="text-center"></p>
+    </div>
+
+
+    <!-- Floating Scroll Icon -->
+    <div class="fixed bottom-4 right-6 z-40 text-2xl flex gap-2">
+        <button aria-label="scroll-to-top" role="button" id="scrollButton"
+            class="bg-red-100 hover: hover:bg-blue-200 border-2 border-transparent text-red-500 p-3 px-5 rounded-full shadow-lg transition-all duration-300">
+            <i class="fa fa-angle-double-up"></i>
+        </button>
+        <figure id="chatbotButton"
+            class="bg-blue-100 size-[55px] hover:scale-110 text-blue-500 rounded-full shadow-lg transition-all duration-300 cursor-pointer">
+            <img src="/images/chatBot.jpg" alt="chatBot image" class="size-full rounded-full">
+        </figure>
+    </div>
+    <!-- Chatbot Window -->
+    <div id="chatbotWindow"
+        class="fixed bottom-24 right-6 w-[80%] sm:w-[50%] bg-white shadow-lg rounded-xl border p-4 z-40 opacity-0 scale-90 transform transition-all duration-300 hidden">
+        <div class="flex justify-between items-center border-b pb-2">
+            <h3 class="text-lg font-semibold">TripBuddy <i class="fa fa-ravelry" aria-hidden="true"></i></h3>
+            <button id="closeChatbot" class="text-red-500 hover:text-red-700">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        <div id="chatbox" class="h-72 overflow-y-auto p-2">
+            <p class="text-sm text-gray-600">Your ultimate travel guide, one chat away!</p>
+        </div>
+        <hr class="my-4">
+        <div class="border flex rounded-full">
+            <input type="text" id="chatInput" class="flex-1 p-2 rounded-l-full pl-4 focus:outline-none"
+                placeholder="Ask about travel..." required>
+            <button id="sendMessage" class="bg-gray-500 text-white py-2 rounded-full w-20 text-xl">
+                <i class="fa fa-plane" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- Signup Popup Modal -->
+    <form id="signupModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-40">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96 transform scale-95 opacity-0 transition-all duration-300">
+            <h2 class="text-xl font-bold mb-4 text-center">Signup</h2>
+            <input type="text" id="name" placeholder="Enter Name" class="w-full p-2 border rounded mb-3">
+            <input type="email" id="email" placeholder="Enter Email" class="w-full p-2 border rounded mb-3">
+            <input type="password" id="password" placeholder="Enter Password" class="w-full p-2 border rounded mb-3">
+            <div class="flex justify-between">
+                <button id="closeSignup" class="px-4 py-2 bg-gray-300 rounded">Cancel</button>
+                <button id="signupBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Signup
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Success/Error Popup Modal -->
+    <div id="messageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-40">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80 transform scale-95 opacity-0 transition-all duration-300">
+            <h2 id="messageTitle" class="text-xl font-bold mb-2 text-center"></h2>
+            <p id="messageText" class="text-center mb-4"></p>
+            <button id="closeMessage" class="px-4 py-2 bg-black text-white rounded mx-auto block">
+                Close
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Register the Service Worker in index.html -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')   // Path to your service worker file
+                    .then(registration => {
+                        console.log('Service Worker registered:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+
+    <script type="module" src="./main.ts"></script>
+    <!-- <script src="./utilities/chat.ts" type="module"></script>
+    <script src="index.ts" type="module"></script>
+    <script src="./utilities/popup.ts" type="module"></script>
+    <script src="./utilities/searchResult.ts" type="module"></script>
+    <script src="./utilities/signup.ts" type="module"></script>
+    <script src="./utilities/search.ts" type="module"></script>
+    <script src="./utilities/theme.ts" type="module"></script> -->
+</body>
+
+</html>
