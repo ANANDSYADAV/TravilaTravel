@@ -20,5 +20,8 @@
   "license": "Apache-2.0 license",
   "devDependencies": {
     "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }

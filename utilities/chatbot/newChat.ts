@@ -1,9 +1,9 @@
 import { travelKeywords } from "../keywords/travelKeyWords";
 import { explicitKeywords } from "../keywords/expliciteKeyWords";
-import { envVariables } from "../../env";
+// import { envVariables } from "../../env";
 
-const apiKey: string = envVariables.GEMINI_API_KEY;
-const geminiBaseUrl: string = envVariables.GEMINI_BASE_URL;
+const apiKey: string | undefined = process.env.GEMINI_API_KEY;
+const geminiBaseUrl: string | undefined = process.env.GEMINI_BASE_URL;
 const url: string = `${geminiBaseUrl}?key=${apiKey}`;
 
 async function getTravelInfo(query: string): Promise<string> {

@@ -1,6 +1,9 @@
-import { envVariables } from "./env";
+// import { envVariables } from "./env";
+// import dotenv from "dotenv";
+// dotenv.config();
 
-const baseUrl: string = envVariables.BASE_URL;
+const baseUrl: string | undefined = process.env.BASE_URL;
+// const baseUrl: string = envVariables.BASE_URL;
 
 const fetchApi = async <T>(endPoint: string): Promise<T> => {
   try {
