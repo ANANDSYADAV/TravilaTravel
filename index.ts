@@ -1,3 +1,10 @@
+import "./utilities/chatbot/chat";
+import "./utilities/popup";
+import "./utilities/search";
+import "./utilities/searchResult";
+import "./utilities/signup";
+import "./utilities/theme";
+
 import {
   AddArticleDataInterface,
   testimonialsInterface,
